@@ -140,11 +140,10 @@ void loop()
   timeClient.update();
     
     
-  //String Now_time = timeClient.getFormattedTime();
-  //int date = timeClient.getDay();
   unsigned long unix_time = timeClient.getEpochTime();
   Serial.println(unix_time);
-  // invio mex MQTT
+  
+  //setup MQTT client
   setupMqttClient();
 
   do{
